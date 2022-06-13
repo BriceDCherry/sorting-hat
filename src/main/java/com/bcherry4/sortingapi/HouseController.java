@@ -38,7 +38,7 @@ public class HouseController {
   public Map<String, House> read(@PathVariable Long id) {
     House house = houseService
         .findById(id)
-        .orElseThrow(() -> new ResourceNotFoundException("No pokemon with that ID"));
+        .orElseThrow(() -> new ResourceNotFoundException("No house with that ID"));
     return createHashSingular(house);
   }
 
@@ -54,7 +54,7 @@ public class HouseController {
   public Map<String, House> update(@RequestBody House house, @PathVariable Long id) {
     House updatedHouse = houseService
         .update(house)
-        .orElseThrow(() -> new ResourceNotFoundException("No pokemon with that ID"));
+        .orElseThrow(() -> new ResourceNotFoundException("No house with that ID"));
 
     return createHashSingular(updatedHouse);
   }
