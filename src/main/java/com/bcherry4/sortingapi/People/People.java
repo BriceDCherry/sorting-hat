@@ -26,7 +26,8 @@ public class People {
   @Column(name = "house")
   private String house;
 
-
+  @Column(name = "location")
+  private String location;
 
 
 }
